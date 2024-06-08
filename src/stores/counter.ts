@@ -1,12 +1,20 @@
-import { ref, computed } from 'vue'
+import { EStoreNames } from '@/stores/storeNames.enum'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
+interface State {
+  count: number
+}
 
-  return { count, doubleCount, increment }
+export const useCounter = defineStore(EStoreNames.COUNTER, {
+  state: (): State => ({
+    count: 22
+  }),
+  getters: {
+    getDoubleCount: (state) => state.count * 2
+  },
+  actions: {
+    setCounter(value: number) {
+      this.count = value
+    }
+  }
 })
