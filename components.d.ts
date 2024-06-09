@@ -9,7 +9,15 @@ declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
     Calendar: typeof import('primevue/calendar')['default']
+    Checkbox: typeof import('./src/components/ui/Checkbox.vue')['default']
+    copy: typeof import('./src/components/ui/Select copy.vue')['default']
+    Dropdown: typeof import('primevue/dropdown')['default']
+    Input: typeof import('./src/components/ui/Input.vue')['default']
+    InputSwitch: typeof import('primevue/inputswitch')['default']
+    InputText: typeof import('primevue/inputtext')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Select: typeof import('./src/components/ui/Select.vue')['default']
+    ToggleSwitch: typeof import('./src/components/ui/ToggleSwitch.vue')['default']
   }
 }

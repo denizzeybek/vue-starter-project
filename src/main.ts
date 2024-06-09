@@ -1,6 +1,8 @@
 import './assets/styles/index.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import plugins from './plugins'
+
 import PrimeVue from 'primevue/config'
 import 'primeicons/primeicons.css'
 import lara from '@/presets/lara'
@@ -16,5 +18,6 @@ app.use(PrimeVue, {
   pt: lara
 })
 app.use(router)
+app.use(plugins)
 
 app.mount('#app')
