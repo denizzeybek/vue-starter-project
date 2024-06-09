@@ -3270,7 +3270,7 @@ vue-template-compiler@^2.7.14:
     de-indent "^1.0.2"
     he "^1.2.0"
 
-vue-tsc@^2.0.11:
+vue-tsc@^2.0.21:
   version "2.0.21"
   resolved "https://registry.npmjs.org/vue-tsc/-/vue-tsc-2.0.21.tgz"
   integrity sha512-E6x1p1HaHES6Doy8pqtm7kQern79zRtIewkf9fiv7Y43Zo4AFDS5hKi+iHi2RwEhqRmuiwliB1LCEFEGwvxQnw==
