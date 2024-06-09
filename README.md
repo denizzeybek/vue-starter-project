@@ -10,4 +10,4 @@ This is vue starter template to quickly start your project.
 - Tailwind
 - Prime Vue
 - Vee Validate
-- Custom Form Elements for vee-validate
+- Custom Form Components for vee-validate
