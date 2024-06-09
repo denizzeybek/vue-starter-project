@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import plugins from './plugins'
 import PrimeVue from "primevue/config";
 import Lara from '@/presets/lara'
+import 'primeicons/primeicons.css'
 
 import App from './App.vue'
 import router from './router'
