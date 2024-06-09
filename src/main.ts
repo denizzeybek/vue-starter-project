@@ -1,7 +1,7 @@
 import './assets/styles/index.css'
 import { createApp } from 'vue'
 import plugins from './plugins'
-import PrimeVue from 'primevue/config';
+import PrimeVue from "primevue/config";
 import Lara from '@/presets/lara'
 
 import App from './App.vue'
