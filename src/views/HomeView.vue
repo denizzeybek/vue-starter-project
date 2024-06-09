@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pl-md">
+  <div class="mx-20 my-10">
     <h1 class="text-h4 text-weight-bold">PrimeVue + vee-validate v4</h1>
     <div class="q-mt-md q-gutter-md">
       <form @submit="onSubmit">
@@ -16,6 +16,7 @@
             label="Password"
             name="password"
             type="password"
+            placeholder="enter password"
             :errors="errors"
           />
         </div>
@@ -41,20 +42,15 @@
           />
         </div>
 
-        <label for="chbx">I've read and accept the termAgreements & conditions.</label>
-        <Checkbox
-          id="chbx"
+        <RCheckbox
           v-model="termAgreements"
-          :class="{ 'p-invalid': errors.termAgreements }"
-          binary
-          aria-describedby="chbx-error"
+          label="I've read and accept the terms & conditions."
+          name="termAgreements"
         />
-        <small class="p-error" id="chbx-error">
-          {{ errors.termAgreements || '&nbsp;' }}
-        </small>
 
         <div class="footer">
           <Button label="Submit" type="submit" />
+          <Button @click="resetForm" label="Reset" type="button" class="p-button-secondary" />
         </div>
       </form>
     </div>
@@ -63,7 +59,6 @@
 
 <script setup lang="ts">
 import { useForm } from 'vee-validate'
-import Checkbox from 'primevue/checkbox'
 import * as yup from 'yup'
 
 const schema = yup.object({
@@ -117,12 +112,6 @@ body {
     Apple Color Emoji,
     Segoe UI Emoji,
     Segoe UI Symbol;
-}
-
-label {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 4px;
 }
 
 .footer {

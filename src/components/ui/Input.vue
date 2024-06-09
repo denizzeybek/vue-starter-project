@@ -1,14 +1,14 @@
 <template>
+  errors: {{ errors }}
   <div class="flex flex-col gap-4">
-    <label :for="$attrs.inputId">{{ label }}</label>
+    <label :for="name">{{ label }}</label>
     <InputText
+      :id="name"
       v-bind="$attrs"
       :class="{ 'p-invalid': errors[name] }"
-      :type="type"
-      :aria-describedby="`${$attrs.inputId}-help`"
-      :placeholder="placeholder"
+      :aria-describedby="`${name}-help`"
     />
-    <small :id="`${$attrs.inputId}-help`" class="p-error">
+    <small :id="`${name}-help`" class="text-r-red">
       {{ errors[name] }}
     </small>
   </div>
@@ -19,16 +19,11 @@ interface IProps {
   errors: Record<string, string>
   label: string
   name: string
-  type?: string
-  placeholder?: string
-
 }
 
 defineOptions({
   inheritAttrs: false
 })
 
-withDefaults(defineProps<IProps>(), {
-  type: 'text'
-})
+withDefaults(defineProps<IProps>(), {})
 </script>

@@ -23,7 +23,7 @@ export default {
             { 'rounded-none first:rounded-l-md last:rounded-r-md': parent.instance.$name == 'InputGroup' },
 
             // Link Button
-            { 'text-primary-600 bg-transparent border-transparent': props.link },
+            { 'text-r-primary bg-transparent border-transparent': props.link },
 
             // Plain Button
             { 'text-white bg-gray-500 border border-gray-500': props.plain && !props.outlined && !props.text },
@@ -42,14 +42,14 @@ export default {
 
             // Primary Button
             {
-                'text-primary-inverse': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'bg-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'border border-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
+                'text-r-white': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'bg-r-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'border border-r-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
             },
             // Primary Text Button
-            { 'text-primary': props.text && props.severity === null && !props.plain },
+            { 'text-r-primary': props.text && props.severity === null && !props.plain },
             // Primary Outlined Button
-            { 'text-primary border border-primary': props.outlined && props.severity === null && !props.plain },
+            { 'text-r-primary border border-r-primary': props.outlined && props.severity === null && !props.plain },
 
             // Secondary Button
             {
@@ -109,8 +109,8 @@ export default {
             // Danger Button
             {
                 'text-white dark:text-surface-900': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
-                'bg-red-500 dark:bg-red-400': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
-                'border border-red-500 dark:border-red-400': props.severity === 'danger' && !props.text && !props.outlined && !props.plain
+                'bg-r-red dark:bg-red-400': props.severity === 'danger' && !props.text && !props.outlined && !props.plain,
+                'border border-r-red dark:border-red-400': props.severity === 'danger' && !props.text && !props.outlined && !props.plain
             },
             // Danger Text Button
             { 'text-red-500 dark:text-red-400': props.text && props.severity === 'danger' && !props.plain },
@@ -131,7 +131,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring',
 
             // Link
-            { 'focus:ring-primary': props.link },
+            { 'focus:ring-r-primary': props.link },
 
             // Plain
             { 'hover:bg-gray-600 hover:border-gray-600': props.plain && !props.outlined && !props.text },
@@ -139,10 +139,10 @@ export default {
             { 'hover:bg-surface-300/20': props.plain && (props.text || props.outlined) },
 
             // Primary
-            { 'hover:bg-primary-hover hover:border-primary-hover': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain },
-            { 'focus:ring-primary': props.severity === null },
+            { 'hover:bg-r-primary-hover hover:border-r-primary-hover': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain },
+            { 'focus:ring-r-primary': props.severity === null },
             // Text & Outlined Button
-            { 'hover:bg-primary-300/20': (props.text || props.outlined) && props.severity === null && !props.plain },
+            { 'hover:bg-r-primary-300/20': (props.text || props.outlined) && props.severity === null && !props.plain },
 
             // Secondary
             { 'hover:bg-surface-600 dark:hover:bg-surface-300 hover:border-surface-600 dark:hover:border-surface-300': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain },

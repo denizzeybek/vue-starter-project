@@ -1,17 +1,16 @@
 <template>
   <div class="flex flex-col gap-4">
-    <label :for="$attrs.inputId">{{ label }}</label>
+    <label :for="name">{{ label }}</label>
     <Dropdown
+      :id="name"
       v-bind="$attrs"
       :options="options"
       :class="{ 'p-invalid': errors[name] }"
-      :type="type"
-      :aria-describedby="`${$attrs.inputId}-help`"
+      :aria-describedby="`${name}-help`"
       optionLabel="name"
       optionValue="value"
-      :placeholder="placeholder"
     />
-    <small :id="`${$attrs.inputId}-help`" class="p-error">
+    <small :id="`${name}-help`" class="p-error">
       {{ errors[name] }}
     </small>
   </div>
@@ -22,7 +21,6 @@ interface IProps {
   errors: Record<string, string>
   label: string
   name: string
-  placeholder?: string
   options: {
     name: string
     value: string
